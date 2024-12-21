@@ -38,7 +38,7 @@ jobs:
         run: npm run build
 
       - name: deploy server
-        uses: appleboy/ssh-action@0.1.4
+        uses: appleboy/ssh-action@1.1.0
         with:
           host: 188.40.156.186
           username: root
