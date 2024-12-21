@@ -36,3 +36,16 @@ jobs:
       # Build the React app
       - name: Build
         run: npm run build
+
+      - name: deploy server
+        uses: applebody/ssh-action@0.1.7
+        with:
+          host: 188.40.156.186
+          username: root
+          key: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDx+4rZm1VG0G5WA9q6AwDPgvWFjb9UvWawgJWGM0Mge2DkuEGgbGob5xPkxkqXc2tTvfJatcxYDFvMFljidBuycic15WsRWtGE2eNPw6f39ZK/H73iKX4bKvxlik+UQR9hLEJgwckgPCa52Te98vkjdtRtMNS4SLDI8PMZzYQSldL57sMWs2TTgsNTqITidlLqFlgGnyWKuCEggs9zA0XljXaxsdqHEV4wLlajn3sSTXh3+OetKaiUmxISAwaZYjPuD2JxOW+oKozxw+tmAiuWTiNqfxEq5ccbK5vKJzUybuI7XdfW0w6ILkGjMuO+/TWpaR5oiGZpgozMiES1sfwFqf/EVBZu3OTY9VOLZw/GzS6XJtT6hl5Cnqor7VhbAFoeh1xBKICEzhBb6tAYk4FYQuK6BLUrXmpdMsJGq+CkcAfoP0VpcTRViSjIi2geHrOCvjb/NynReec36XO/YSLYeKOBNOI/pDS7b5Mtq595Nltxs/YRr/gt+6PkRwWYqY1nR55+Bn0M9dygVCNT07e/Sjto+PZhT8qP+LF5AOaD+/9NIb8bUHBUtFOFx9nZkqFFLGv3MWl93WLWTxvUBk7IOKP3KwC+5yW05q7Y8gibMm/YE1q2YwfVHeWGwOARxB27krDZm17lHVxdKVv9/rWEysZi85aHOBOlykLYTroNkw== jeko.erg@gmail.com
+          script: |
+            cd /home/portfolio
+            cd portfolio_app
+            npm install
+            npm run build
+            sudo systemctl restart nginx
