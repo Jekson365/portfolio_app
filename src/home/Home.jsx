@@ -4,6 +4,7 @@ function Home() {
   return (
     <>
         <h1>რატის Patara პენისი აქ! dasdasdasd</h1>
+        <h1>ganaxlebuli gverdi</h1>
     </>
   )
 }
