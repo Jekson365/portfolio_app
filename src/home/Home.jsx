@@ -3,7 +3,7 @@ import React from 'react'
 function Home() {
   return (
     <>
-        <h1>რატის დიდი პენისი აქ!</h1>
+        <h1>რატის Patara პენისი აქ!</h1>
     </>
   )
 }
