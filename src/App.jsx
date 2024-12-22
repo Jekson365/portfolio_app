@@ -1,12 +1,21 @@
-import { useState } from 'react'
-import Home from './home/Home'
+import {BrowserRouter, Route, Routes} from "react-router-dom";
+import Home from "./home/Home.jsx";
+import {Navigation} from "./components/Navigation.jsx";
+import './styles/index.scss'
 
 function App() {
-  return (
-    <>
-      <Home />
-    </>
-  )
+    return (
+        <>
+            <div className={'cover'}>
+                <BrowserRouter>
+                    <Navigation/>
+                    <Routes>
+                        <Route path={'/'} element={<Home/>}/>
+                    </Routes>
+                </BrowserRouter>
+            </div>
+        </>
+    )
 }
 
 export default App
