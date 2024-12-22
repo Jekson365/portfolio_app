@@ -14,7 +14,7 @@ export const Socials = () => {
         {
             icon: <ArticleIcon/>,
             name: 'Resume',
-            link: '../../../public/jemali_ergemlidze.pdf',
+            link: '../../../jemali_ergemlidze.pdf',
             downloadable: true,
 
         },
