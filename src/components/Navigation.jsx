@@ -1,5 +1,4 @@
-import {Box, Stack} from "@mui/material";
-import PersonImage from '../assets/Light bulb-cuate.svg'
+import {Stack} from "@mui/material";
 
 export const Navigation = () => {
     return (
@@ -19,12 +18,13 @@ export const Navigation = () => {
                         flexDirection={'row'}
                         gap={'35px'}
                     >
-                        <div className={'c-orange main-font nav-item'}>Experience</div>
-                        <div className={'c-orange main-font nav-item'}>Projects</div>
-                        <div className={'c-orange main-font nav-item'}>Tech Stack</div>
+                        <div className={'c-orange main-font nav-item'}
+                        >+995 557 98 37 61
+                        </div>
+                        <div className={'c-orange main-font nav-item'}>jeko.erg@gmail.com</div>
                     </Stack>
                 </Stack>
-                <div className={'icon'}></div>
+                {/*<div className={'icon'}></div>*/}
             </Stack>
         </>
     )

@@ -5,68 +5,87 @@
   padding: 0;
   font-family: "Ysabeau SC", serif;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 $main-text-color: #ff4d00;
 $secondary-text-color: #303030;
 body {
 }
+
 .main-font {
   font-family: "Ysabeau SC", serif;
   font-optical-sizing: auto;
   font-style: normal;
 }
+
 .c-orange {
   color: #ff4d00;
+}
+.c-white {
+  color: white;
 }
 .c-secondary {
   color: $secondary-text-color !important;
 }
+
 .nav-item {
   cursor: pointer;
   transition: 0.3s;
+
   &:hover {
     font-weight: bold;
   }
 }
+
 .icon {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background: #ff4d00;
 }
+
 body {
   background: #f6f6f6;
 }
+
 .cover {
+  position: relative;
   padding: 20px;
   background: white;
   margin: 0 auto;
   max-width: 1110px;
-  min-height:100vh;
+  min-height: 100vh;
 }
+
 .intro-desc {
   h1 {
     color: $secondary-text-color;
   }
+
   span {
     color: $main-text-color;
   }
+
   .main-desc {
     font-size: 17px;
     color: $secondary-text-color;
   }
 }
+
 .headline {
   font-weight: bold;
   font-size: 35px;
   color: $main-text-color;
 }
+
 .underline {
   font-size: 18px;
   color: $main-text-color;
 }
+
 .bullet {
   width: 10px;
   height: 10px;
@@ -76,14 +95,72 @@ body {
 .intro-image {
   transform: rotateY(180deg);
 }
+
 .hover-effect {
   cursor: pointer;
   transition: 0.3s;
+
   &:hover {
     transform: scale(1.1);
   }
 }
+
 .has-back {
   background: black;
   padding: 10px 10px;
+}
+a {
+  text-decoration: none;
+}
+.socials {
+  position: absolute;
+  top: 50%;
+  right: -75px;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  z-index: 1000;
+  @media screen and (max-width: 1000px) {
+    & {
+      right: 20px;
+    }
+  }
+  .soc-icon {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 30px !important;
+    justify-content: center;
+    width: 50px;
+    transition: 0.3s;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: $main-text-color;
+    &:hover {
+      border-radius: 5px;
+      width: 200px;
+    }
+    &:hover .soc-font {
+      display: block;
+    }
+    .soc-font {
+      display: none;
+      font-weight: bold;
+      font-size: 18px;
+    }
+  }
+}
+
+.tech-item {
+  border: 1px solid $main-text-color;
+  background: $main-text-color;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 10px;
+  font-weight: bold;
+  border-radius: 2px;
 }
