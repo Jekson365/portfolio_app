@@ -45,8 +45,9 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/portfolio_appo
-            git pull
-            npm install
-            npm run build
-            sudo systemctl restart nginx
+            set -e
+            cd /home/portfolio_app || exit 1
+            git pull || exit 1
+            npm install || exit 1
+            npm run build || exit 1
+            sudo systemctl restart nginx || exit 1
