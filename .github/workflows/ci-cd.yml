@@ -45,9 +45,8 @@ jobs:
           username: root
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
-            cd /home/portfolio_app
-            git pull origin main
+            cd /home/portfolio_appo
+            git pull
             npm install
-            nvm use 19
             npm run build
             sudo systemctl restart nginx
