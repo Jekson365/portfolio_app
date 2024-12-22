@@ -17,7 +17,7 @@ export const Intro = () => {
                         direction='column'
                         gap={'10px'}
                     >
-                        <h1><span>Hi! </span>My name is Gia</h1>
+                        <h1><span>Hi! </span>My name is Jeko</h1>
                         <div className={'main-desc'}>
                             Friendly,Motivated and passionate web developer with 3 years of experience in full-
                             stack development. Proficient in front-end and back-end
