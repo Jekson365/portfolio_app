@@ -48,6 +48,7 @@ jobs:
             set -e
             cd /home/portfolio_app || exit 1
             git pull || exit 1
+            nmv use 19
             npm install || exit 1
             npm run build || exit 1
             sudo systemctl restart nginx || exit 1
