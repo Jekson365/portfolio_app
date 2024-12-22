@@ -13,7 +13,7 @@ export const Navigation = () => {
                     alignItems={'center'}
                     gap={'40px'}
                 >
-                    <h2 className={'c-orange main-font'}>Gia</h2>
+                    <h2 className={'c-orange main-font'}>Jeko</h2>
                     <Stack
                         flexDirection={'row'}
                         gap={'35px'}
