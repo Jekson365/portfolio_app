@@ -22,7 +22,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 16
-            
+
             # Set up Node.js
       - name: Set up Node.js
         uses: actions/setup-node@v3
@@ -46,9 +46,13 @@ jobs:
           key: ${{ secrets.SSH_PRIVATE_KEY }}
           script: |
             set -e
-            cd /home/portfolio_app || exit 1
-            git pull || exit 1
+            echo "Starting deployment..."
+            cd /home/portfolio_app
+            git pull
+            echo "Loading nvm..."
+            source ~/.nvm/nvm.sh
             nvm use 19
-            npm install || exit 1
-            npm run build || exit 1
-            sudo systemctl restart nginx || exit 1
+            npm install
+            npm run build
+            sudo systemctl restart nginx
+          
