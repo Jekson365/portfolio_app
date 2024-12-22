@@ -36,7 +36,8 @@ jobs:
       # Build the React app
       - name: Build
         run: npm run build
-
+      - name: Debug SSH Key
+        run: echo "${{ secrets.SSH_PRIVATE_KEY }}"
       - name: deploy server
         uses: appleboy/ssh-action@v1.1.0
         with:
