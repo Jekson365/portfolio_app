@@ -48,5 +48,6 @@ jobs:
             cd /home/portfolio_app
             git pull origin main
             npm install
+            nvm use 19
             npm run build
             sudo systemctl restart nginx
