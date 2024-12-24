@@ -24,9 +24,14 @@ body {
 .c-orange {
   color: #ff4d00;
 }
+.c-gray {
+  color: $secondary-text-color !important;
+}
+
 .c-white {
   color: white;
 }
+
 .c-secondary {
   color: $secondary-text-color !important;
 }
@@ -109,9 +114,11 @@ body {
   background: black;
   padding: 10px 10px;
 }
+
 a {
   text-decoration: none;
 }
+
 .socials {
   position: absolute;
   top: 50%;
@@ -125,6 +132,7 @@ a {
       right: 20px;
     }
   }
+
   .soc-icon {
     display: flex;
     align-items: center;
@@ -137,13 +145,16 @@ a {
     border-radius: 50%;
     cursor: pointer;
     background: $main-text-color;
+
     &:hover {
       border-radius: 5px;
       width: 200px;
     }
+
     &:hover .soc-font {
       display: block;
     }
+
     .soc-font {
       display: none;
       font-weight: bold;
@@ -163,4 +174,22 @@ a {
   padding: 10px 10px;
   font-weight: bold;
   border-radius: 2px;
+}
+
+.project-item {
+  width: 100%;
+  height: 300px;
+  padding: 5px;
+  border-radius: 3px;
+  outline: 1px solid $main-text-color;
+
+  .project-item-image {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+  .own-project-icon {
+    color: $main-text-color;
+    font-size: 25px !important;
+  }
 }
