@@ -87,7 +87,7 @@ export const Projects = () => {
                 gap={'10px'}
             >
                 <div className={'headline'}>Experience</div>
-                <div className={'underline c-secondary'}>Companies that I collaborated in</div>
+                <div className={'underline c-secondary'}>Companies that I collaborated with</div>
                 <Stack
                     gap={'100px'}
                     width={'100%'}
