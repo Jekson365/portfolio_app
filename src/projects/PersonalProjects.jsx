@@ -2,37 +2,21 @@ import {Grid, Box, Stack} from "@mui/material";
 import {FaPython} from "react-icons/fa";
 import {DiRuby} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
+import quizzGif from '../assets/gifs/quizz.gif';
 
 
 export const PersonalProjects = () => {
     const arr = [
         {
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
+            img: quizzGif,
             title: "Georgian Quizz",
             description: 'questions tests how much georgian is in you',
             tools: [
                 <DiRuby/>,
                 <FaReact/>
-            ]
-        },
-        {
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
-            title: 'Ecommerce Website',
-            description: 'fully functional websites for online shop',
-            tools: [
-                <DiRuby/>,
-                <FaReact/>
-            ]
-        },
-        {
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmCy16nhIbV3pI1qLYHMJKwbH2458oiC9EmA&s",
-            title: 'QR code generator',
-            description: 'App gives you opportunity to create qr code and concatenate it with your image',
-            tools: [
-                <DiRuby/>,
-                <FaReact/>,
-                <FaPython/>
-            ]
+            ],
+            github: 'https://github.com/Jekson365/guess_api',
+            live:'http://guess.testpuzzle.ge/'
         },
     ]
     return (
@@ -81,6 +65,18 @@ export const PersonalProjects = () => {
                                                 </>
                                             )
                                         })}
+                                    </Stack>
+                                    <Stack
+                                        mt={1}
+                                        direction={'row'}
+                                        gap={'5px'}
+                                    >
+                                        <button className={'button-min-main'}>
+                                            <a href={e.live}>Live</a>
+                                        </button>
+                                        <button className={'button-min-main'}>
+                                            <a href={e.github}>Source</a>
+                                        </button>
                                     </Stack>
                                 </Stack>
                             </Stack>
