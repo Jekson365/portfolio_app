@@ -4,6 +4,7 @@ import {DiRuby} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
 import quizzGif from '../assets/gifs/quizz.gif';
 import dozaiGif from '../assets/gifs/dozai.gif';
+import cafiendGif from '../assets/gifs/cafiend.gif';
 
 
 export const PersonalProjects = () => {
@@ -28,6 +29,16 @@ export const PersonalProjects = () => {
             ],
             github: 'https://github.com/Jekson365/dozai',
             live:'http://dozai.jergemlidze.com.ge'
+        },
+        {
+            img: cafiendGif,
+            title: "Cafiend",
+            description: 'Design is Take from webflow.com.',
+            tools: [
+                <FaReact/>
+            ],
+            github: 'https://github.com/Jekson365/cafiend',
+            live:'http://cafiend.jergemlidze.com.ge/'
         },
     ]
     return (
