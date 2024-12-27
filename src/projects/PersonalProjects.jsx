@@ -3,6 +3,7 @@ import {FaPython} from "react-icons/fa";
 import {DiRuby} from "react-icons/di";
 import {FaReact} from "react-icons/fa";
 import quizzGif from '../assets/gifs/quizz.gif';
+import dozaiGif from '../assets/gifs/dozai.gif';
 
 
 export const PersonalProjects = () => {
@@ -17,6 +18,16 @@ export const PersonalProjects = () => {
             ],
             github: 'https://github.com/Jekson365/guess_api',
             live:'http://guess.testpuzzle.ge/'
+        },
+        {
+            img: dozaiGif,
+            title: "Dozai",
+            description: 'Design is Take from webflow.com.',
+            tools: [
+                <FaReact/>
+            ],
+            github: 'https://github.com/Jekson365/dozai',
+            live:'http://dozai.jergemlidze.com.ge'
         },
     ]
     return (
