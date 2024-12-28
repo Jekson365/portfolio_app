@@ -49,11 +49,14 @@ export const PersonalProjects = () => {
             <Grid container spacing={5} mt={2}>
                 {arr.map((e) => {
                     return (
-                        <Grid xs={4} item>
+                        <Grid xs={6} item
+
+                        >
                             <Stack
+                                data-aos={'fade-up'}
                                 direction={'column'}
                                 alignItems={'flex-start'}
-                                minHeight={'350px'}
+                                minHeight={'450px'}
                                 maxHeight={'600px'}
                                 className={'project-item'}>
                                 <div className={'project-item-image'}

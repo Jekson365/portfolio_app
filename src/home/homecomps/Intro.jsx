@@ -14,6 +14,8 @@ export const Intro = () => {
             >
                 <div className={'intro-desc'}>
                     <Stack
+                        data-aos-duration="1500"
+                        data-aos="fade-up"
                         direction='column'
                         gap={'10px'}
                     >
@@ -28,6 +30,8 @@ export const Intro = () => {
                 </div>
                 <img
                     width={'500px'}
+                    data-aos-duration="1500"
+                    data-aos="fade-down"
                     className={'intro-image'}
                     src={PersonImage}/>
             </Stack>

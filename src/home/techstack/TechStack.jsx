@@ -9,8 +9,14 @@ export const TechStack = () => {
     return (
         <>
             <Box mt={3}></Box>
-            <div className={'headline'}>Tech Stack</div>
-            <div className={'underline c-secondary'}>Technologies that I mastered</div>
+            <div className={'headline'}
+                 data-aos={'fade'}
+                 data-aos-duration={1600}
+            >Tech Stack</div>
+            <div className={'underline c-secondary'}
+                 data-aos={'fade'}
+                 data-aos-duration={1600}
+            >Technologies that I mastered</div>
             <Box mt={6}></Box>
             <Grid container spacing={2}>
                 {stacks.map((e) => {

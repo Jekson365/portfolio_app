@@ -9,6 +9,7 @@ export const Projects = () => {
         {
             name: 'Vabaco',
             position: 'Back-end Developer',
+            duration:400,
             exps: [
                 'Master the Model-View-Controller design pattern, organizing application\n' +
                 'logic effectively.',
@@ -25,6 +26,7 @@ export const Projects = () => {
         {
             name: 'Storera (B2C)',
             position: 'Front-end Developer',
+            duration:800,
             exps: [
                 'Master structuring web pages with HTML and styling them using CSS,\n' +
                 'including concepts like Flexbox, Grid, and responsive design.',
@@ -38,6 +40,7 @@ export const Projects = () => {
         {
             name: 'Mega Plus',
             position: 'IT support',
+            duration:3000,
             exps: [
                 'gaining strong problem-solving skills and technical expertise.',
                 'Gain experience in managing and configuring operating systems\n' +
@@ -55,28 +58,32 @@ export const Projects = () => {
             background: false,
             width: "150px",
             height: "35px",
-            link: "https://profesto.ge/"
+            link: "https://profesto.ge/",
+            duration:400,
         },
         {
             img: Img2,
             background: true,
             width: "120px",
             height: "40px",
-            link: 'https://www.storera.ge/ka'
+            link: 'https://www.storera.ge/ka',
+            duration:800,
         },
         {
             img: Img4,
             background: false,
             width: "140px",
             height: "30px",
-            link: 'https://vabaco.ge/language/en/home-page/'
+            link: 'https://vabaco.ge/language/en/home-page/',
+            duration:1200,
         },
         {
             img: Img5,
             background: false,
             width: "140px",
             height: "40px",
-            link: 'https://megaplus.ge/'
+            link: 'https://megaplus.ge/',
+            duration:1600,
         },
     ]
     return (
@@ -86,8 +93,14 @@ export const Projects = () => {
                 alignItems={'flex-start'}
                 gap={'10px'}
             >
-                <div className={'headline'}>Experience</div>
-                <div className={'underline c-secondary'}>Companies that I collaborated with</div>
+                <div className={'headline'}
+                    data-aos={'fade'}
+                     data-aos-duration={1600}
+                >Experience</div>
+                <div className={'underline c-secondary'}
+                     data-aos={'fade'}
+                     data-aos-duration={1600}
+                >Companies that I collaborated with</div>
                 <Stack
                     gap={'100px'}
                     width={'100%'}
@@ -99,7 +112,10 @@ export const Projects = () => {
                     {projects.map((project) => {
                         return (
                             <>
-                                <a href={project.link}>
+                                <a href={project.link}
+                                   data-aos={'fade-right'}
+                                   data-aos-duration={`${project.duration}`}
+                                >
                                     <img
                                         className={`${project.background ? 'has-back' : null} hover-effect`}
                                         width={project.width}
@@ -118,7 +134,9 @@ export const Projects = () => {
                             <>
                                 <Stack
                                     direction={'row'}
+                                    data-aos={'fade-up'}
                                     gap={'10px'}
+
                                 >
                                     <h4>{experience.name} :</h4>
                                     <div>{experience.position}</div>
@@ -128,6 +146,7 @@ export const Projects = () => {
                                         <>
                                             <Stack
                                                 ml={3}
+                                                data-aos={'fade-up'}
                                                 direction={'row'}
                                                 alignItems={'center'}
                                                 gap={'15px'}
