@@ -1,4 +1,5 @@
 import {Stack} from "@mui/material";
+import Me from '../assets/unnamed.jpg'
 
 export const Navigation = () => {
     return (
@@ -24,7 +25,12 @@ export const Navigation = () => {
                         <div className={'c-orange main-font nav-item'}>jeko.erg@gmail.com</div>
                     </Stack>
                 </Stack>
-                {/*<div className={'icon'}></div>*/}
+                <div className={'icon'}
+                    style={{
+                        backgroundImage: `url(${Me})`,
+                        backgroundSize: 'cover',
+                    }}
+                ></div>
             </Stack>
         </>
     )

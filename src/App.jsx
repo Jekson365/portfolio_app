@@ -7,7 +7,8 @@ import {useEffect} from "react";
 // import {I18nextProvider} from 'react-i18next';
 // import '../i18.js'
 import AOS from "aos";
-import 'aos/dist/aos.css';  // Import AOS styles
+import 'aos/dist/aos.css';
+import {Cover} from "./home/cover/Cover.jsx";  // Import AOS styles
 
 
 function App() {
@@ -16,8 +17,9 @@ function App() {
     }, []);
     return (
         <>
+            <Cover/>
             <div className={'cover'}>
-                    <Socials/>
+                <Socials/>
                     <BrowserRouter>
                         <Navigation/>
                         <Routes>

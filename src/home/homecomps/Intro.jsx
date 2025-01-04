@@ -32,6 +32,7 @@ export const Intro = () => {
                     width={'500px'}
                     data-aos-duration="1500"
                     data-aos="fade-down"
+                    style={{transform: 'scaleX(-1)'}}
                     className={'intro-image'}
                     src={PersonImage}/>
             </Stack>

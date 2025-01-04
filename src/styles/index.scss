@@ -11,6 +11,7 @@ html {
 }
 
 $main-text-color: #ff4d00;
+$main-text-color-light: rgba(255, 77, 0, 0.92);
 $secondary-text-color: #303030;
 body {
 }
@@ -24,6 +25,7 @@ body {
 .c-orange {
   color: #ff4d00;
 }
+
 .c-gray {
   color: $secondary-text-color !important;
 }
@@ -175,6 +177,7 @@ a {
   font-weight: bold;
   border-radius: 2px;
 }
+
 .button-min-main {
   color: $main-text-color;
   background: transparent;
@@ -184,17 +187,69 @@ a {
   cursor: pointer;
   transition: 0.3s;
   border: 1px solid $main-text-color;
+
   a {
     color: $main-text-color;
   }
-  &:hover  {
+
+  &:hover {
     background: $main-text-color;
     color: white;
   }
+
   &:hover a {
     color: white;
   }
 }
+
+.scrolled {
+  z-index: -100000 !important;
+  opacity:0 !important;
+}
+.main-cover {
+  position: fixed;
+  width: 100%;
+  transition: 0.3s;
+  background: $main-text-color-light;
+  z-index: 1000;
+  gap: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+    gap: 20px;
+
+    h1 {
+      color: white;
+    }
+
+    .desc {
+      font-size: 20px;
+      font-weight: bold;
+      color: white;
+    }
+  }
+
+  .image-cover {
+    border: 5px solid white;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background-position: center center;
+    overflow: hidden;
+    background-size: 110%;
+  }
+}
+
 .project-item {
   width: 100%;
   height: 300px;
@@ -211,6 +266,7 @@ a {
     background-position: center center;
     background-size: cover;
   }
+
   .own-project-icon {
     color: $main-text-color;
     font-size: 25px !important;
