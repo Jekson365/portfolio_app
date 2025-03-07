@@ -6,12 +6,27 @@ import quizzGif from "../assets/gifs/quizz.gif";
 import dozaiGif from "../assets/gifs/dozai.gif";
 import cafiendGif from "../assets/gifs/cafiend.gif";
 import empGif from "../assets/gifs/emp.gif";
+import guessGif from "../assets/gifs/guess.gif";
 import { TbBrandCSharp } from "react-icons/tb";
 import { AiOutlineDotNet } from "react-icons/ai";
 import { BiLogoPostgresql } from "react-icons/bi";
 
 export const PersonalProjects = () => {
   const arr = [
+    {
+      img: guessGif,
+      title: "Geo guesser",
+      description:
+        "app contains georgian locations only. try guess location",
+      tools: [
+        <FaReact />,
+        <TbBrandCSharp />,
+        <AiOutlineDotNet />,
+        <BiLogoPostgresql />,
+      ],
+      github: "https://github.com/Jekson365/guesser_api",
+      live: "http://gs.jergemlidze.com.ge",
+    },
     {
       img: empGif,
       title: "Employee Managment",
@@ -79,19 +94,18 @@ export const PersonalProjects = () => {
                   }}
                 >
                   <Stack gap={"5px"} mt={1}>
-                    <h4 className={"c-orange"}
-                    style={{fontSize:"25px"}}
-                    >{e.title}</h4>
-                    <div className={"c-gray"}
-                    style={{fontSize:"20px"}}
-                    >{e.description}</div>
+                    <h4 className={"c-orange"} style={{ fontSize: "25px" }}>
+                      {e.title}
+                    </h4>
+                    <div className={"c-gray"} style={{ fontSize: "20px" }}>
+                      {e.description}
+                    </div>
                   </Stack>
                   <Stack direction={"row"} gap={"5px"} mt={2}>
                     {e.tools.map((t) => {
                       return (
                         <>
-                          <div className={"own-project-icon"}
-                          >{t}</div>
+                          <div className={"own-project-icon"}>{t}</div>
                         </>
                       );
                     })}
